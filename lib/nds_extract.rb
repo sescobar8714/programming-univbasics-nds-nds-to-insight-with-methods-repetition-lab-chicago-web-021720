@@ -42,12 +42,12 @@ end
 def total_gross(source)
   # Write this implementation
   gross_for_directors = {}
-  all_total = 0
+  total = 0
     i = 0
     while i < source.count
       binding.pry
-      all_total += source[:movies][i][:worldwide_gross]
-      gross_for_director = all_total
+      total += source[:movies][i][:worldwide_gross]
+      gross_for_director = total
       i += 1
     end
   return gross_for_director
