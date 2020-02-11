@@ -51,7 +51,7 @@ def total_gross(source)
     total += temp_dir_total[director_name]
     i += 1
   end
-total 
+total
 
   # Should use methods:
   # 1. directors_totals: returns a Hash of { dir_name => gross }
