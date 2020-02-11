@@ -51,8 +51,8 @@ def total_gross(source)
 binding.pry
     total += temp_dir_total
     i += 1
-  end 
-  
+  end
+
 
   # Should use methods:
   # 1. directors_totals: returns a Hash of { dir_name => gross }
