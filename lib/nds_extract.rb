@@ -41,10 +41,19 @@ end
 
 
 def total_gross(source)
-  # Write this implementation
-      binding.pry
-  result[director] = total
-  return result
+  temp_dir_total = directors_totals(source)
+  temp_dir_list = list_of_directors(source)
+  total = 0
+  i = 0
+
+  while i < temp_dir_list.count do
+    director_name = temp_dir_list[i]
+binding.pry
+    total += temp_dir_total
+    i += 1
+  end 
+  
+
   # Should use methods:
   # 1. directors_totals: returns a Hash of { dir_name => gross }
   # 2. list_of_directors: names provides an Array of directors names (use
