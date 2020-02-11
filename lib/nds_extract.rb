@@ -42,7 +42,7 @@ end
 
 def total_gross(source)
   # Write this implementation
-  gross_for_director = source 
+  gross_for_director = source
       #binding.pry
   result[director] = total
   return result
