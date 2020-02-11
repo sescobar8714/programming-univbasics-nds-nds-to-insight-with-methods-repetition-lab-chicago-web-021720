@@ -42,7 +42,6 @@ end
 
 def total_gross(source)
   # Write this implementation
-  gross_for_directors = {}
   total = 0
     i = 0
     while i < source.count
