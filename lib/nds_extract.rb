@@ -5,6 +5,7 @@ require 'pry'
 def directors_totals(source)
   result = {}
   director_index = 0
+  #binding.pry
   while director_index < source.size do
     director = source[director_index]
     result[director[:name]] = gross_for_director(director)
@@ -14,6 +15,7 @@ def directors_totals(source)
 end
 
 def gross_for_director(d)
+
   total = 0
   index = 0
 
@@ -39,23 +41,18 @@ end
 
 
 def total_gross(source)
-  # Write this implementation
-  new_hash = {}
-  i = 0
-  x = 0
+  temp_dir_total = directors_totals(source)
+  temp_dir_list = list_of_directors(source)
   total = 0
-  #binding.pry
-  while i < source.count
-    #binding.pry
-    director_name = source[i][:name]
-    while x < source.count
-      total += source[:movies][x][:worldwide_gross]
-      new_hash = {director_name=>total}
-      x += 1
-    end
+  i = 0
+
+  while i < temp_dir_list.count do
+    director_name = temp_dir_list[i]
+    total += temp_dir_total[director_name]
     i += 1
   end
-  return new_hash
+total
+
   # Should use methods:
   # 1. directors_totals: returns a Hash of { dir_name => gross }
   # 2. list_of_directors: names provides an Array of directors names (use
