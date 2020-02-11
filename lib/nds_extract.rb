@@ -44,8 +44,9 @@ def total_gross(source)
   gross_for_directors = {}
   all_total = 0
     i = 0
-    while i < source.count
-      gross_for_director += source[:movies][i][:worldwide_gross]
+    while i < source.count 
+      all_total += source[:movies][i][:worldwide_gross]
+      gross_for_director = all_total
       i += 1
     end
   return gross_for_director
