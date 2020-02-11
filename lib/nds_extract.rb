@@ -46,9 +46,8 @@ def total_gross(source)
   result = {}
       #binding.pry
   result[director] = total
-      i += 1
     end
-  return gross_for_director
+  return result
   # Should use methods:
   # 1. directors_totals: returns a Hash of { dir_name => gross }
   # 2. list_of_directors: names provides an Array of directors names (use
