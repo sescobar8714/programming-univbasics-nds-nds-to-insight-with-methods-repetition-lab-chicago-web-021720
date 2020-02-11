@@ -48,11 +48,10 @@ def total_gross(source)
 
   while i < temp_dir_list.count do
     director_name = temp_dir_list[i]
-binding.pry
-    total += temp_dir_total
+    total += temp_dir_total[director_name]
     i += 1
   end
-
+total 
 
   # Should use methods:
   # 1. directors_totals: returns a Hash of { dir_name => gross }
