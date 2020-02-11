@@ -14,6 +14,7 @@ def directors_totals(source)
 end
 
 def gross_for_director(d)
+
   total = 0
   index = 0
 
@@ -40,22 +41,16 @@ end
 
 def total_gross(source)
   # Write this implementation
-  new_hash = {}
-  i = 0
-  x = 0
-  total = 0
-  #binding.pry
-  while i < source.count
-    #binding.pry
-    director_name = source[i][:name]
-    while x < source.count
-      total += source[:movies][x][:worldwide_gross]
-      new_hash = {director_name=>total}
-      x += 1
+  gross_for_directors = {}
+  total_gross = 0
+    i = 0
+
+    while i < source.count
+      total_gross += source[:movies][i][:worldwide_gross]
+      gross_for_directors = [source[:movies][i][:worldwide_gross]]
+      i += 1
     end
-    i += 1
-  end
-  return new_hash
+  return gross_for_director
   # Should use methods:
   # 1. directors_totals: returns a Hash of { dir_name => gross }
   # 2. list_of_directors: names provides an Array of directors names (use
